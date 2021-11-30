@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Fixo",
+      "plans": [
+        {
+          "title": "Ilimitado Fixo brasil",
+          "price": 49.99
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "TV",
+      "plans": [
+        {
+          "title": "Ultimate HD",
+          "price": 69.99
+        },
+        {
+          "title": "Full HD",
+          "price": 49.99
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Internet",
+      "plans": [
+        {
+          "title": "100MB",
+          "price": 59.99
+        },
+        {
+          "title": "200MB",
+          "price": 79.99
+        },
+        {
+          "title": "300MB",
+          "price": 99.99
+        }
+      ]
+    }
+  ]
+}

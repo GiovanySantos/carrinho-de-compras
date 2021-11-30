@@ -7,18 +7,16 @@ const Products = () => {
   const { products } = useContext(ProductsContext);
 
   return (
-    <>
+    <Container>
       {products &&
         products.map((product) => {
           return (
-            <Container>
-              <Row>
-                <Product product={product} />
-              </Row>
-            </Container>
+            <Row key={product.id}>
+              <Product product={product} />
+            </Row>
           );
         })}
-    </>
+    </Container>
   );
 };
 

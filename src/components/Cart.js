@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
+import { Container } from "react-bootstrap";
 import { ProductsContext } from "../contexts/ProductsContext";
 
 const Cart = () => {
   const { state, dispatch } = useContext(ProductsContext);
 
   return (
-    <>
+    <Container className='p-5'>
       {state.cart.map((item, i) => {
         return (
           <div key={i}>
@@ -14,7 +15,7 @@ const Cart = () => {
           </div>
         );
       })}
-    </>
+    </Container>
   );
 };
 

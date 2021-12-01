@@ -21,9 +21,7 @@ const Home = () => {
           <Col className='d-flex justify-content-start'>
             <Products />
           </Col>
-        </Row>
-        <Row>
-          <Col className='d-flex justify-content-start'>
+          <Col className='d-flex justify-content-center'>
             <Cart />
           </Col>
         </Row>

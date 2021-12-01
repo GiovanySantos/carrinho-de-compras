@@ -26,7 +26,7 @@ const Product = ({ product }) => {
       <h1 className='product-title pt-5'>{product.title}</h1>
       <p>Selecione um plano de {product.title}</p>
       <Row>
-        <Col className='d-flex justify-content-start p-2'>
+        <Col className='d-flex justify-content-start p-2 text-center'>
           {product.plans &&
             product.plans.map((plan, i) => {
               return (

@@ -5,15 +5,15 @@
       "title": "Internet",
       "plans": [
         {
-          "title": "100MB",
+          "title": "100 Mega",
           "price": 59.99
         },
         {
-          "title": "200MB",
+          "title": "200 Mega",
           "price": 79.99
         },
         {
-          "title": "300MB",
+          "title": "300 Mega",
           "price": 99.99
         }
       ]

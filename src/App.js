@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import "./globals/global.scss";
 
 function App() {
   return (

@@ -1,0 +1,30 @@
+.product-title {
+  color: rgb(143, 13, 175);
+}
+
+.plan-box {
+  border: solid;
+  border-width: 1px;
+  border-color: #ececec;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.plan-box-active {
+  border: solid;
+  border-width: 1px;
+  border-color: #a01cec;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.header {
+  background: #34254d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}

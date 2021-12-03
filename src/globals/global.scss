@@ -1,5 +1,5 @@
 .product-title {
-  color: rgb(143, 13, 175);
+  color: #920fb3;
 }
 
 .plan-box {
@@ -27,4 +27,25 @@
   color: #fff;
   display: flex;
   justify-content: center;
+}
+
+.cart {
+  color: #503679;
+}
+
+.button-cart {
+  border: none;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 90px;
+  padding-left: 90px;
+  color: #fff;
+  background: #503679;
+  &:hover {
+    background: #8f68cc;
+  }
+  &:disabled {
+    background: #b9b9b9;
+  }
 }

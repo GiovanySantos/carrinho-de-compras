@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Container>
+      <Container className="pb-5">
         <Row>
           <Col className='d-flex justify-content-start'>
             <Products />

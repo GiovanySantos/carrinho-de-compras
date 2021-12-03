@@ -5,38 +5,44 @@
       "title": "Internet",
       "plans": [
         {
+          "id": 11,
           "title": "100 Mega",
           "price": 59.99
         },
         {
+          "id": 12,
           "title": "200 Mega",
           "price": 79.99
         },
         {
+          "id": 13,
           "title": "300 Mega",
           "price": 99.99
         }
       ]
     },
     {
-      "id": 3,
-      "title": "Telefone Fixo",
+      "id": 2,
+      "title": "Fixo",
       "plans": [
         {
+          "id": 21,
           "title": "Ilimitado Fixo brasil",
           "price": 49.99
         }
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "TV",
       "plans": [
         {
+          "id": 31,
           "title": "Ultimate HD",
           "price": 69.99
         },
         {
+          "id": 32,
           "title": "Full HD",
           "price": 49.99
         }

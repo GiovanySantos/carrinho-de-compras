@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { ProductsContext } from "../contexts/ProductsContext";
 
 const Cart = () => {
-  const { state, dispatch } = useContext(ProductsContext);
+  const { state } = useContext(ProductsContext);
 
   return (
     <Container className='p-5'>

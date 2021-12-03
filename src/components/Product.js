@@ -10,15 +10,26 @@ const Product = ({ product }) => {
       product: product.title,
       plan: plan,
     };
-    const found = state.cart.find((item) => item.product === product.title);
-    if (!found) {
-      dispatch({ type: "add", payload: objProduct });
-    } else if (found.plan.title !== plan.title) {
-      dispatch({ type: "remove", payload: objProduct });
-      dispatch({ type: "add", payload: objProduct });
-    } else {
-      dispatch({ type: "remove", payload: objProduct });
-    }
+    
+    const addProd = () => {
+      const found = state.cart.find((item) => item.product === product.title);
+      if (!found) {
+        dispatch({ type: "add", payload: objProduct });
+      } else if (found.plan.title !== plan.title) {
+        dispatch({ type: "remove", payload: objProduct });
+        dispatch({ type: "add", payload: objProduct });
+      } else {
+        dispatch({ type: "remove", payload: objProduct });
+      }
+    };
+
+    if (product.id === 1) addProd();
+
+    if (product.id === 2)
+      if (state.cart.some((item) => item.product === "Internet")) addProd();
+
+    if (product.id === 3)
+      if (state.cart.some((item) => item.product === "Fixo")) addProd();
   };
 
   return (
@@ -28,7 +39,7 @@ const Product = ({ product }) => {
       <Row>
         <Col className='d-flex justify-content-start p-2 text-center'>
           {product.plans &&
-            product.plans.map((plan, i) => {
+            product.plans.map((plan) => {
               return (
                 <div
                   className={
@@ -36,7 +47,7 @@ const Product = ({ product }) => {
                       ? `plan-box-active`
                       : `plan-box`
                   }
-                  key={i}
+                  key={plan.id}
                   onClick={() => handleSelectField(plan)}>
                   <p className='plan-title'>{plan.title}</p>
                   <p className='plan-price'>R$: {plan.price}</p>

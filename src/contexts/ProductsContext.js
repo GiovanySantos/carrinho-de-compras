@@ -18,6 +18,12 @@ const reducer = (state, action) => {
         ),
       };
     }
+    case "cleanup": {
+      return {
+        ...state,
+        cart: [],
+      };
+    }
 
     default:
       return state;

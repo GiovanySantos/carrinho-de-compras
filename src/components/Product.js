@@ -11,14 +11,18 @@ const Product = ({ product }) => {
       plan: plan,
     };
 
-    const found = state.cart.find((item) => item.product === product.title);
-    if (!found) {
-      dispatch({ type: "add", payload: objProduct });
-    } else if (found.plan.title !== plan.title) {
-      dispatch({ type: "remove", payload: objProduct });
-      dispatch({ type: "add", payload: objProduct });
+    if (product.id === 1 && state.cart.length > 1) {
+      dispatch({ type: "cleanup" });
     } else {
-      dispatch({ type: "remove", payload: objProduct });
+      const found = state.cart.find((item) => item.product === product.title);
+      if (!found) {
+        dispatch({ type: "add", payload: objProduct });
+      } else if (found.plan.title !== plan.title) {
+        dispatch({ type: "remove", payload: objProduct });
+        dispatch({ type: "add", payload: objProduct });
+      } else {
+        dispatch({ type: "remove", payload: objProduct });
+      }
     }
   };
 

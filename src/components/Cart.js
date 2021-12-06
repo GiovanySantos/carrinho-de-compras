@@ -34,7 +34,7 @@ const Cart = () => {
         <div className='pb-3'>
           <button
             className='button-cart'
-            disabled={state.cart.length < 3}
+            disabled={state.cart.length < 2}
             onClick={() => alert("Compra efetuada")}>
             Continuar
           </button>

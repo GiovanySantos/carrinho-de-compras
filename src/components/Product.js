@@ -10,26 +10,16 @@ const Product = ({ product }) => {
       product: product.title,
       plan: plan,
     };
-    
-    const addProd = () => {
-      const found = state.cart.find((item) => item.product === product.title);
-      if (!found) {
-        dispatch({ type: "add", payload: objProduct });
-      } else if (found.plan.title !== plan.title) {
-        dispatch({ type: "remove", payload: objProduct });
-        dispatch({ type: "add", payload: objProduct });
-      } else {
-        dispatch({ type: "remove", payload: objProduct });
-      }
-    };
 
-    if (product.id === 1) addProd();
-
-    if (product.id === 2)
-      if (state.cart.some((item) => item.product === "Internet")) addProd();
-
-    if (product.id === 3)
-      if (state.cart.some((item) => item.product === "Fixo")) addProd();
+    const found = state.cart.find((item) => item.product === product.title);
+    if (!found) {
+      dispatch({ type: "add", payload: objProduct });
+    } else if (found.plan.title !== plan.title) {
+      dispatch({ type: "remove", payload: objProduct });
+      dispatch({ type: "add", payload: objProduct });
+    } else {
+      dispatch({ type: "remove", payload: objProduct });
+    }
   };
 
   return (
@@ -41,17 +31,21 @@ const Product = ({ product }) => {
           {product.plans &&
             product.plans.map((plan) => {
               return (
-                <div
+                <button
                   className={
                     state.cart.some((item) => item.plan.title === plan.title)
                       ? `plan-box-active`
                       : `plan-box`
                   }
                   key={plan.id}
-                  onClick={() => handleSelectField(plan)}>
+                  onClick={() => handleSelectField(plan)}
+                  disabled={
+                    product.id !== 1 &&
+                    !state.cart.some((item) => item.product === "Internet")
+                  }>
                   <p className='plan-title'>{plan.title}</p>
                   <p className='plan-price'>R$: {plan.price}</p>
-                </div>
+                </button>
               );
             })}
         </Col>

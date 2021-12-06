@@ -15,10 +15,7 @@ const Home = () => {
   const MainPage = styled.div`
     background: ${theme ? "#fff" : "#181A1B"};
     color: ${theme ? "#181A1B" : "#fff"};
-    h1 {
-      color: ${theme ? "#920FB3" : "#8F68CC"};
-    }
-    h6 {
+    h1, h6 {
       color: ${theme ? "#920FB3" : "#8F68CC"};
     }
     p {
